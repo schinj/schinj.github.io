@@ -163,7 +163,6 @@ img {
  * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
  */
-button,
 input,
 optgroup,
 select,
@@ -182,7 +181,6 @@ textarea {
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
  */
-button,
 input {
   /* 1 */
   overflow: visible;
@@ -192,8 +190,7 @@ input {
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
  */
-button,
-select {
+buttonselect {
   /* 1 */
   text-transform: none;
 }
@@ -201,7 +198,6 @@ select {
 /**
  * Correct the inability to style clickable types in iOS and Safari.
  */
-button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
@@ -211,7 +207,6 @@ button,
 /**
  * Remove the inner border and padding in Firefox.
  */
-button::-moz-focus-inner,
 [type='button']::-moz-focus-inner,
 [type='reset']::-moz-focus-inner,
 [type='submit']::-moz-focus-inner {
@@ -222,7 +217,6 @@ button::-moz-focus-inner,
 /**
  * Restore the focus styles unset by the previous rule.
  */
-button:-moz-focusring,
 [type='button']:-moz-focusring,
 [type='reset']:-moz-focusring,
 [type='submit']:-moz-focusring {
@@ -778,7 +772,7 @@ dd {
 /**
  * Buttons
  */
-.button, a.button, button, [type=submit], [type=reset], [type=button] {
+a.button, button, [type=submit], [type=reset], [type=button] {
   -webkit-appearance: none;
   display: inline-block;
   border: 1px solid #0366ee;
@@ -798,7 +792,7 @@ dd {
   line-height: 1;
 }
 
-.button:hover, a.button:hover, button:hover, [type=submit]:hover, [type=reset]:hover, [type=button]:hover {
+a.button:hover, button:hover, [type=submit]:hover, [type=reset]:hover, [type=button]:hover {
   border: 1px solid #0250bc;
   background: #0250bc;
   color: #ffffff;
@@ -1019,6 +1013,53 @@ caption {
     width: 100%;
   }
 }
+
+ol, ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
 
 /*
  * Navigation
