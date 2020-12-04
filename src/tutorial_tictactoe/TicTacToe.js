@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Board from './Board'
+import gameStyle from "./tictactoe.module.css"
 
 class TicTacToe extends Component {
 	constructor(props) {
@@ -60,11 +61,14 @@ class TicTacToe extends Component {
 	    }	    
 
 		return (
-			<div className="game">
-		        <div className="game-board">
-		          <Board squares={current.squares} isXNext={this.state.isXNext} onClick = {this.handleClick}/>
+			<div style={{display: `block`}}>
+		        <div>
+					<Board 
+						squares={current.squares} 
+				  		isXNext={this.state.isXNext} onClick = {this.handleClick}
+					/>
 		        </div>
-		        <div className="game-info">
+		        <div>
 		          <div>{status}</div>
 		          <ol>{moves}</ol>
 		        </div>
